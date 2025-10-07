@@ -13,10 +13,9 @@ object FindTheOddInt extends App{
   val x = a.filter(pair => pair._2 % 2 == 1)
   val v = x.keySet.mkString
   val j = v.toInt
-  println(j)
 
   def findOddInt(xs: Seq[Int]): Int = {
-   val valuesAndTheirOccurencesMap = xs.groupBy(l => l).map(t => (t._1, t._2.length))
+    val valuesAndTheirOccurencesMap = xs.groupBy(l => l).map(t => (t._1, t._2.length))
     val filterIfOccurenceIsOdd = valuesAndTheirOccurencesMap.filter(pair => pair._2 % 2 == 1)
     val getKeyAndMakeString = filterIfOccurenceIsOdd.keySet.mkString
     val turnStringIntoInt = getKeyAndMakeString.toInt

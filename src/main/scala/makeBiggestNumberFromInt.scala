@@ -3,10 +3,11 @@ object makeBiggestNumberFromInt extends App{
   val arrayOfInts = intToBeUsed.toString.split("")
   val sortThenReverse = arrayOfInts.sorted.reverse
   println(sortThenReverse.mkString("").toInt)
+  //https://www.geeksforgeeks.org/scala/how-to-sort-an-array-in-scala/
 
   def makeBiggestNumFromInt(x: Int): Int = {
-    val arrayOfInts = x.toString.split("")
-    val sortThenReverse = arrayOfInts.sorted.reverse
+    val arrayOfInts:Array[String] = x.toString.split("")
+    val sortThenReverse: Array[String] = arrayOfInts.sorted.reverse
     sortThenReverse.mkString("").toInt
   }
 
