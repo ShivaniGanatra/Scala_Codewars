@@ -1,4 +1,5 @@
 object Currying extends App{
+  //https: //www.youtube.com/watch?v=YEudoVTR02o
 
     def add2 (x:Int) = (y:Int) => x + y
     println(add2(3)(4)) //7
