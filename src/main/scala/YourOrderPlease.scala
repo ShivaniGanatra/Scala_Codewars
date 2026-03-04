@@ -43,15 +43,25 @@ object YourOrderPlease extends App {
     val arrayOfStrings = longString.split(" ")
     val mapIntWord = arrayOfStrings.map(x => makeSingleMapFromOneWordInside(x))
     val sortedMapIntWord = mapIntWord.sorted
+    val stuff = sortedMapIntWord.flatten.toMap
+    stuff.values.mkString(" ")
 
+  }
 
+  val map = Map("a" -> 1, "b" -> 2, "c" -> 3)
 
+  // Using get
+  val value = map.get("a") // Returns Some(1)
+  println("hi " + value.mkString)
 
+  def getValue(num:Int,x : Map[Int,String]) = {
+    x.get(num).mkString
   }
 
 
 
-  //println(something("3jsdkh 4jvdfk 8fjdbv 6jkfdh").mkString("Array(", ", ", ")"))
+
+  println(something("3jsdkh 9jvdfk 2gvv 8fjdbv"))
 
 
 
